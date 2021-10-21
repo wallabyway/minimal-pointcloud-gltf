@@ -5,25 +5,63 @@ a gltf 'profile' for an open format Point-cloud standard, leveraging glTF and 3d
 ### Point-Cloud profile
 
 ##### Recommended extensions:
-- [GLTF_EXT_meshopt_compression](https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html)
-- [3DTILES_content_gltf](https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions/3DTILES_content_gltf)
-- [3DTILES_implicit_tiling](https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions/3DTILES_implicit_tiling)
+- [GLTF: EXT_meshopt_compression](https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html)
+- [GLTF: KHR_materials_unlit](https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_materials_unlit/README.md)
+- [3DTILES: content_gltf](https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions/3DTILES_content_gltf)
+- [3DTILES: implicit_tiling](https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions/3DTILES_implicit_tiling)
 
-##### Constraints:
-1. glb is point primitives only
-2. only one gltf node per tile
-3. only one large uint32 buffer (do not break up into 65k buffer chunks)
+##### Creating a glb Tile:
+1. point primitives only
+2. only one node
+3. single buffer
+4. required buffer view for VEC3 positions (max size uint32) (do not break up into 65k buffer chunks)
+5. optional buffer view for VEC4 RGB colors (max size uint32) (do not break up into 65k buffer chunks)
+5. optional buffer view for VEC3 normals (max size uint32) (do not break up into 65k buffer chunks)
+7. single material using extension 'KHR_materials_unlit' 
+8. finally, compress glb with [GLTF_EXT_meshopt_compression](https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html) (ie. try [glTFpack](https://github.com/zeux/meshoptimizer/tree/master/gltf) )
 
+
+##### Unlit Material example:
+```json
+"materials": [
+    {
+      "name": "unlit",
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+    }
+  ],
+```
+
+##### single position & color buffer example:
+
+```json
+"bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 200789448,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 267719264,
+      "byteOffset": 200789448,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+```
 
 ##### References
-- 3DTiles-Next extensions - https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions
-- meshopt_compression https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html
-- Gltfpack - https://github.com/zeux/meshoptimizer/tree/master/gltf
+- all 3DTiles-Next extensions - https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions
 
 
 ### Demo
-1. take point clouds
-2. convert to glb
-3. view in mapbox
+
+Add point-cloud to mapbox, via 3d-Tiles/glTF pointcloud file set
 
 (watch this space)
