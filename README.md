@@ -10,15 +10,15 @@ a gltf 'profile' for an open format Point-cloud standard, leveraging glTF and 3d
 - 3DTILES_implicit_tiling
 
 ##### Constraints:
-- glb is point primitives only
-- only one gltf node per tile
-- only one large uint32 buffer (do not break up into 65k buffer chunks)
+1. glb is point primitives only
+2. only one gltf node per tile
+3. only one large uint32 buffer (do not break up into 65k buffer chunks)
 
 
 ##### References
-3dTiles - https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions
-meshopt_compression https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html
-Gltfpack - https://github.com/zeux/meshoptimizer/tree/master/gltf
+- 3DTiles-Next extensions - https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions
+- meshopt_compression https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html
+- Gltfpack - https://github.com/zeux/meshoptimizer/tree/master/gltf
 
 
 ### Demo
