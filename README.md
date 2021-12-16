@@ -7,7 +7,7 @@ a gltf 'profile' for an open format Point-cloud standard, leveraging glTF and 3d
 ##### Recommended extensions:
 - [GLTF: EXT_meshopt_compression](https://gltf-transform.donmccurdy.com/classes/extensions.meshoptcompression.html)
 - [GLTF: KHR_materials_unlit](https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_materials_unlit/README.md)
-- [3DTILES: content_gltf](https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions/3DTILES_content_gltf)
+- [3DTILES: EXT_mesh_features](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features)
 - [3DTILES: implicit_tiling](https://github.com/CesiumGS/3d-tiles/tree/3d-tiles-next/extensions/3DTILES_implicit_tiling)
 
 ##### Creating a glb Tile:
