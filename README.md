@@ -66,3 +66,12 @@ a gltf 'profile' for an open format Point-cloud standard, leveraging glTF and 3d
 Add point-cloud to mapbox, via 3d-Tiles/glTF pointcloud file set
 
 (watch this space)
+
+| three.js (ebeaufay)  | Cesium (experimental) |
+| ------------- | ------------- |
+| ![3d-tiles-next](https://user-images.githubusercontent.com/440241/148264966-f62d1e44-7e4e-4571-ba5d-e5da89f31823.gif)  | ![cesium-gltf-zeux-3d-tiles-next](https://user-images.githubusercontent.com/440241/148264951-283656e7-5e57-4528-967e-c2bb0f4eeb7d.JPG)  |
+
+
+
+
+
