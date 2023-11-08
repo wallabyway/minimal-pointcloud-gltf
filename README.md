@@ -34,6 +34,14 @@ a gltf 'profile' for an open format Point-cloud standard, leveraging glTF and 3d
   ],
 ```
 
+###### Flower
+![Flower_point-cloud_linear_unlit_MeshOpt.JPG](Flower_point-cloud_linear_unlit_MeshOpt.JPG)
+- Source: [SketchFab cc](https://sketchfab.com/3d-models/flower-point-cloud-photogrammetry-13a409d10f154d5dbfd009fe75d52222)
+- Using [KHR_materials_unlit](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/UnlitTest)
+- Compressed with MeshOpt Compression, based on [this conversation](https://github.com/KhronosGroup/glTF-Sample-Assets/issues/31)
+- glTF version: `flower-pointcloud-MeshOpt_unlit` [gltf](https://github.com/wallabyway/minimal-pointcloud-gltf/blob/main/flower-pointcloud-MeshOpt_unlit.gltf) [bin](https://github.com/wallabyway/minimal-pointcloud-gltf/blob/main/flower-pointcloud-MeshOpt_unlit.bin)
+- glb version: [flower-pointcloud-MeshOpt_unlit.glb](https://github.com/wallabyway/minimal-pointcloud-gltf/blob/main/flower-pointcloud-MeshOpt_unlit.glb)
+
 ##### single position & color buffer example:
 
 ```json
