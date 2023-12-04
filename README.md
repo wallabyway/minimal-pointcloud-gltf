@@ -67,7 +67,7 @@ a gltf 'profile' for an open format Point-cloud standard, leveraging glTF and 3d
 
 ##### References
 - all 3DTiles-Next extensions - https://github.com/CesiumGS/3d-tiles/tree/main/extensions
-
+- convert from pointcloud 3dTiles v1.0 (PNTS-Draco) to 3dTiles v1.1 (glb-MeshOpt) I used this script: https://gist.github.com/wallabyway/d022f97191599c5d9dde4827aecec1e5
 
 ### Demo
 
